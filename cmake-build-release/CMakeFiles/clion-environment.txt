@@ -1,4 +1,4 @@
-ToolSet: 15.0@C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise
+ToolSet: w64 6.0@C:\mingw64\mingw-w64\mingw64
 Options: 
 
 Options:

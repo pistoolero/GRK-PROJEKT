@@ -1,0 +1,8 @@
+C:/Users/morwi/Desktop/Grk/cmake-build-debug/install/bin/grk.exe
+C:/Users/morwi/Desktop/Grk/cmake-build-debug/install/bin/models/fish.obj
+C:/Users/morwi/Desktop/Grk/cmake-build-debug/install/bin/models/Shark.obj
+C:/Users/morwi/Desktop/Grk/cmake-build-debug/install/bin/shaders/shader_color.frag
+C:/Users/morwi/Desktop/Grk/cmake-build-debug/install/bin/shaders/shader_color.vert
+C:/Users/morwi/Desktop/Grk/cmake-build-debug/install/bin/shaders/shader_tex.frag
+C:/Users/morwi/Desktop/Grk/cmake-build-debug/install/bin/shaders/shader_tex.vert
+C:/Users/morwi/Desktop/Grk/cmake-build-debug/install/bin/textures/fish.png

@@ -61,8 +61,8 @@ glm::vec2 mousePos;
 glm::vec2 mouseMove;
 /* ------------------------- Objects ---------------------------*/
 std::vector<std::vector<glm::vec3>> fishesPath;
-unsigned fishesPathLength = 15;
-unsigned fishesCount = 220;
+unsigned fishesPathLength = 100;
+unsigned fishesCount = 600;
 /* ------------------------- Settings ---------------------------*/
 glm::vec2 windowSize(600, 600);
 bool pause = false;
@@ -248,9 +248,8 @@ void renderScene()
         }
 	}
 
-    //terrainModelMatrix = glm::translate(glm::vec3(0, -40, 0)) * terrainInitialTransformation;
-    //drawObjectTexture(&terrainModel, terrainModelMatrix, textureTerrain);
-
+    terrainModelMatrix = glm::translate(glm::vec3(0, -35, 0)) * glm::scale(glm::vec3(15,15,25)) *  terrainInitialTransformation;
+    drawObjectTexture(&terrainModel,terrainModelMatrix, textureTerrain);
 	glutSwapBuffers();
 }
 
@@ -265,7 +264,7 @@ void init()
 
 	fishModel = obj::loadModelFromFile("models/fish.obj");
 	sharkModel = obj::loadModelFromFile("models/shark.obj");
-    //terrainModel = obj::loadModelFromFile("models/terrain.obj");
+    terrainModel = obj::loadModelFromFile("models/bottom1.obj");
     submarineModel = obj::loadModelFromFile("models/submarine.obj");
 	whaleModel = obj::loadModelFromFile("models/whale.obj");
     stone1Model = obj::loadModelFromFile("models/stone_1.obj");
@@ -276,7 +275,7 @@ void init()
 
 	textureFish = Core::LoadTexture("textures/fish.png");
 	textureShark = Core::GenerateTexture(255, 0, 255);
-	//textureTerrain = Core::LoadTexture("textures/terrain.png");
+	textureTerrain = Core::LoadTexture("textures/ground.png");
     textureSubmarine = Core::LoadTexture("textures/submarine.png");
 	textureWhale = Core::LoadTexture("textures/submarine.png");
 	textureStone1 =  Core::LoadTexture("textures/stone_1.png");
@@ -303,29 +302,29 @@ void init()
 	fishesPath.resize(fishesCount);
 	for(auto i = 0; i < fishesCount; ++i)
 	{
-		auto x = glm::linearRand(-30.0, 30.0);
+		auto x = glm::linearRand(-100.0, 100.0);
 		auto y = glm::linearRand(-30.0, 30.0);
-		auto z = glm::linearRand(-30.0, 30.0);
+		auto z = glm::linearRand(-100.0, 100.0);
 
 		fishesPath[i].resize(fishesPathLength);
 		fishesPath[i][0] = glm::vec3(x,y,z);
 
 		for(auto j = 1; j < fishesPathLength; ++j)
 		{
-			auto x = glm::linearRand(-3, 3);
+			auto x = glm::linearRand(-10, 10);
 			auto y = glm::linearRand(-3, 3);
-			auto z = glm::linearRand(-3, 3);
+			auto z = glm::linearRand(-10, 10);
 
 			auto vec = glm::vec3(x,y,z);
 
 			fishesPath[i][j] = fishesPath[i][j - 1] + vec;
 
-			if(fishesPath[i][j].r > 30) 		fishesPath[i][j].r -= vec.r * 1.5;
-			else if( fishesPath[i][j].r < -30)	fishesPath[i][j].r += vec.r * 1.5;
+			if(fishesPath[i][j].r > 100) 		fishesPath[i][j].r -= vec.r * 1.5;
+			else if( fishesPath[i][j].r < -100)	fishesPath[i][j].r += vec.r * 1.5;
 			if(fishesPath[i][j].g > 30)			fishesPath[i][j].g -= vec.g * 1.5;
 			else if(fishesPath[i][j].g < -30)	fishesPath[i][j].g += vec.g * 1.5;
-			if(fishesPath[i][j].b > 30) 		fishesPath[i][j].b -= vec.b * 1.5;
-			else if(fishesPath[i][j].b < -30) 	fishesPath[i][j].b += vec.b * 1.5;
+			if(fishesPath[i][j].b > 100) 		fishesPath[i][j].b -= vec.b * 1.5;
+			else if(fishesPath[i][j].b < -100) 	fishesPath[i][j].b += vec.b * 1.5;
 		}
 	}
 }

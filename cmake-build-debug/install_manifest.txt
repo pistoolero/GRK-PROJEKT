@@ -1,8 +1,0 @@
-D:/Projects/Grk/cmake-build-debug/install/bin/grk.exe
-D:/Projects/Grk/cmake-build-debug/install/bin/models/fish.obj
-D:/Projects/Grk/cmake-build-debug/install/bin/models/Shark.obj
-D:/Projects/Grk/cmake-build-debug/install/bin/shaders/shader_color.frag
-D:/Projects/Grk/cmake-build-debug/install/bin/shaders/shader_color.vert
-D:/Projects/Grk/cmake-build-debug/install/bin/shaders/shader_tex.frag
-D:/Projects/Grk/cmake-build-debug/install/bin/shaders/shader_tex.vert
-D:/Projects/Grk/cmake-build-debug/install/bin/textures/fish.png

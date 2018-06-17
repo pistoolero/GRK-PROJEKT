@@ -27,7 +27,7 @@ set(sources
 	${GRK_SOURCE_DIR}/src/Render_Utils.cpp
 	${GRK_SOURCE_DIR}/src/Shader_Loader.cpp
 	${GRK_SOURCE_DIR}/src/Texture.cpp
-)
+     )
 set(headers
 	${GRK_SOURCE_DIR}/include/Camera.h
 	${GRK_SOURCE_DIR}/include/objload.h
@@ -36,7 +36,7 @@ set(headers
 	${GRK_SOURCE_DIR}/include/Shader_Loader.h
 	${GRK_SOURCE_DIR}/include/Texture.h
 	${GRK_SOURCE_DIR}/include/perlin.h
-)
+	)
 set(resources
 	${GRK_SOURCE_DIR}/models
 	${GRK_SOURCE_DIR}/shaders
@@ -49,6 +49,8 @@ target_include_directories(grk PUBLIC
 	$<BUILD_INTERFACE:${GRK_SOURCE_DIR}/include>
 	$<BUILD_INTERFACE:${GRK_SOURCE_DIR}/extlibs/glm/include>
 )
+set(GLEW_ROOT ${GRK_SOURCE_DIR}/extlibs/glew)
+set(Freeglut_ROOT ${GRK_SOURCE_DIR}/extlibs/freeglut)
 
 find_package(OpenGL REQUIRED)
 if(OPENGL_FOUND)
