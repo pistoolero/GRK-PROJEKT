@@ -1,0 +1,40 @@
+"C:\Program Files\JetBrains\CLion 2018.1.5\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - NMake Makefiles" C:\Users\morwi\Desktop\Grk
+-- The C compiler identification is MSVC 19.14.26428.1
+-- The CXX compiler identification is MSVC 19.14.26428.1
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.14.26428/bin/Hostx86/x86/cl.exe
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.14.26428/bin/Hostx86/x86/cl.exe -- broken
+CMake Error at C:/Program Files/JetBrains/CLion 2018.1.5/bin/cmake/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake:52 (message):
+  The C compiler
+
+    "C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.14.26428/bin/Hostx86/x86/cl.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: C:/Users/morwi/Desktop/Grk/cmake-build-release/CMakeFiles/CMakeTmp
+    
+    Run Build Command:"nmake" "/NOLOGO" "cmTC_c7c9a\fast"
+    	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c7c9a.dir\build.make /nologo -L                  CMakeFiles\cmTC_c7c9a.dir\build
+    Building C object CMakeFiles/cmTC_c7c9a.dir/testCCompiler.c.obj
+    	C:\PROGRA~2\MIB055~1\2017\ENTERP~1\VC\Tools\MSVC\1414~1.264\bin\Hostx86\x86\cl.exe @C:\Users\morwi\AppData\Local\Temp\nmB8ED.tmp
+    testCCompiler.c
+    Linking C executable cmTC_c7c9a.exe
+    	"C:\Program Files\JetBrains\CLion 2018.1.5\bin\cmake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c7c9a.dir --manifests  -- C:\PROGRA~2\MIB055~1\2017\ENTERP~1\VC\Tools\MSVC\1414~1.264\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c7c9a.dir\objects1.rsp @C:\Users\morwi\AppData\Local\Temp\nmB9BA.tmp
+    RC Pass 1: command "rc /foCMakeFiles\cmTC_c7c9a.dir/manifest.res CMakeFiles\cmTC_c7c9a.dir/manifest.rc" failed (exit code 0) with the following output:
+    Nie moâ”Ľâ•ťna odnaleâ”Ľâ•‘â”€Ă§ okreâ”ĽĹ¤lonego plikuNMAKE : fatal error U1077: Ă¤"C:\Program Files\JetBrains\CLion 2018.1.5\bin\cmake\bin\cmake.exe"Ă¶: kod powrotu Ă¤0xffffffffĂ¶
+    Stop.
+    NMAKE : fatal error U1077: Ă¤"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\nmake.exe"Ă¶: kod powrotu Ă¤0x2Ă¶
+    Stop.
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/morwi/Desktop/Grk/cmake-build-release/CMakeFiles/CMakeOutput.log".
+See also "C:/Users/morwi/Desktop/Grk/cmake-build-release/CMakeFiles/CMakeError.log".
